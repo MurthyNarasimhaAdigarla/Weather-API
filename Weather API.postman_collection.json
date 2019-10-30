@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "623c2473-f23c-41de-9b79-f96ad488c0a5",
+		"name": "Weather API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Station Id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"external_id\": \"MURTHY411\",\r\n    \"name\": \"Tuni Test Station\",\r\n    \"latitude\": 12.34,\r\n    \"longitude\": 56.78,\r\n    \"altitude\": 901\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/3.0/stations?appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						},
+						{
+							"key": null,
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Created Station Id by id value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/3.0/stations/5db292226c634e000115a265?appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"5db292226c634e000115a265"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Station Ids",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/3.0/stations?appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Station Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"external_id\": \"MURTHY411\",\n    \"name\": \"Tuni Test updated Station\",\n    \"latitude\": 12.34,\n    \"longitude\": 56.78,\n    \"altitude\": 933\n} "
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/3.0/stations?appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						},
+						{
+							"key": null,
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Station Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/3.0/stations/5db292226c634e000115a265?appid=9f31fc8e3a7fa8cb90c85c455f2b5420",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"stations",
+						"5db292226c634e000115a265"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "9f31fc8e3a7fa8cb90c85c455f2b5420"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Measurment Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "samples.openweathermap.org/data/3.0/measurements?station_id=256&type=h&limit=100&appid=5d9db9f36c634e0001159fa6",
+					"host": [
+						"samples",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "station_id",
+							"value": "256"
+						},
+						{
+							"key": "type",
+							"value": "h"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "appid",
+							"value": "5d9db9f36c634e0001159fa6"
+						}
+					]
+				},
+				"description": "Getting weather details of Hyderabad location"
+			},
+			"response": []
+		},
+		{
+			"name": "Getting Weather data by city id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"time_period\":{\r\n      \"start\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":132000000\r\n      },\r\n      \"end\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":432000000\r\n      }\r\n   },\r\n   \"conditions\":[\r\n      {\r\n         \"name\":\"temp\",\r\n         \"expression\":\"$gt\",\r\n         \"amount\":299\r\n      }\r\n   ],\r\n   \"area\":[\r\n      {\r\n         \"type\":\"Point\",\r\n         \"coordinates\":[\r\n            53,\r\n            37\r\n         ]\r\n      }\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id=1261481&appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1261481"
+						},
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "by city name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London,uk"
+						},
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By Long and Lat",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "35"
+						},
+						{
+							"key": "lon",
+							"value": "139"
+						},
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By Zipcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "94040,us"
+						},
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "12,32,15,37,10"
+						},
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all information about a trigger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/3.0/triggers?appid=a474909b9bd0b5205ac147da58080c0f",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"triggers"
+					],
+					"query": [
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create measurements",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"station_id\": \"5db2942a6c634e000115a266\",\r\n    \"dt\": 1479817340,\r\n    \"temperature\": 18.7,\r\n    \"wind_speed\": 1.2,\r\n    \"wind_gust\": 3.4,\r\n    \"pressure\": 1021,\r\n    \"humidity\": 87,\r\n    \"rain_1h\": 2,\r\n    \"clouds\": [\r\n        {\r\n            \"condition\": \"NSC\"\r\n        }\r\n    ]\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/measurements?station_id=816a&type=h&limit=100&appid=a474909b9bd0b5205ac147da58080c0f",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"measurements"
+					],
+					"query": [
+						{
+							"key": "station_id",
+							"value": "816a"
+						},
+						{
+							"key": "type",
+							"value": "h"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "appid",
+							"value": "a474909b9bd0b5205ac147da58080c0f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
